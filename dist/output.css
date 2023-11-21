@@ -2586,6 +2586,12 @@ video {
   }
 }
 
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes arrow {
   0%, 100% {
     transform: translateX(0px);
@@ -2598,6 +2604,32 @@ video {
 
 .hover\:animate-arrow:hover {
   animation: arrow 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .hover\:cursor-pointer:hover {
@@ -2624,6 +2656,58 @@ video {
 
 .hover\:focus\:text-center:focus:hover {
   text-align: center;
+}
+
+@keyframes arrow {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.group:hover .group-hover\:animate-arrow {
+  animation: arrow 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-40deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+}
+
+.group:hover .group-hover\:animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-safe\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-reduce\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
 }
 
 :is(.dark .dark\:block) {
