@@ -15,13 +15,8 @@ module.exports = {
         'white': '#FFFFFF',
         'red': '#FF0000',
         'green': '#00FF00',
-        // 'eerie-black': '#1A1A1A',
-        // 'thulian-pink': '#E771A4',
-        // 'amaranth-purple': '#AA0E52',
         'raisin-black': '#292227',
         'onyx': '#3F3F45',
-        // 'pale-purple': '#FCE7F2',
-        // 'lavender': '#EAEAFA',
         'seasalt': '#F7F7F7',
       },
       borderRadius: {
@@ -33,6 +28,20 @@ module.exports = {
       width: {
         'half': '50vw',
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-40deg)' },
+          '50%': { transform: 'rotate(40deg)' },
+        },
+        arrow: {
+          '0%, 100%': { transform: 'translateX(0px)' },
+          '50%': { transform: 'translateX(10px)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 2s ease-in-out infinite',
+        arrow: 'arrow 2s ease-in-out infinite',
+      }
     },
   },
   plugins: [],
