@@ -5,12 +5,77 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
     <link href="../dist/output.css" rel="stylesheet">
     <title>Tailwind 4</title>
 </head>
 <body>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+<div class="w-full flex justify-center py-8 dark:bg-black">
+    <button
+            id="theme-toggle"
+            class="p-2 rounded-full text-white bg-slate-900 dark:text-slate-900 dark:bg-white"
+    >
+        Toggle theme
+    </button>
+</div>
+
+<section class="bg-seasalt dark:bg-onyx p-2 md:p-6 lg:p-10 pt-8 max-w-2xl mx-auto rounded-lg">
+    <div class="flex justify-between pb-5 dark:text-white">
+        <div class="w-10 h-10 rounded-lg bg-white dark:bg-raisin-black flex items-center justify-center"><span class="material-symbols-outlined">menu</span></div>
+        <div class="rounded-lg bg-white dark:bg-raisin-black p-2 flex justify-between gap-2 items-center font-semibold">Take the quiz<span class="material-symbols-outlined w-6 h-6 rounded-lg bg-raisin-black dark:bg-white text-white dark:text-raisin-black text-xl flex justify-center items-center -rotate-45">link</span></div>
+        <div class="relative"><img src="../assets/profile-pic.jpg" alt="profile picture" class="w-10 h-10 rounded-lg mr-3"><span class="material-symbols-outlined absolute top-0 right-0 border border-black dark:border-white rounded-lg w-3 h-3 text-paragraph flex justify-center items-center">add</span></div>
+    </div>
+    <div class="text-title1 dark:text-white pb-5 md:text-center">Simplify your health
+        <span class="w-6 inline-block rotate-12 -mb-3">
+            <svg viewBox="0 0 35.4113 67.2004" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.255737" y="0.52829" width="35.4113" height="67.2004" rx="17.7057" fill="#D9EAFD"/>
+            </svg>
+        </span>
+        and wellbeing.
+        <span class="h-6 w-6 inline-block">
+            <svg viewBox="0 0 70.7011 70.7011" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.61084" y="30.7361" width="70.7011" height="9.79788" rx="4.89894" fill="#FEF189"/>
+                <rect x="40.8604" y="0.533691" width="70.7011" height="9.79788" rx="4.89894" transform="rotate(90 40.8604 0.533691)" fill="#FEF189"/>
+                <rect x="15.977" y="15.8999" width="39.9687" height="39.9687" rx="19.9844" fill="#FEF189"/>
+            </svg>
+        </span>
+    </div>
+
+    <div class="bg-white dark:bg-raisin-black rounded-md mb-4">
+        <div class="p-4 md:p-6 dark:text-white">
+            <div class="flex justify-between mb-4">
+                <div class="flex gap-1">
+                    <div class="border border-black dark:border-white py-2 px-4 rounded-lg">About <sup>01</sup></div>
+                    <span class="material-symbols-outlined w-[42px] h-[42px] border border-black dark:border-white rounded-lg text-xl flex justify-center items-center -rotate-45">link</span>
+                </div>
+                <span class="material-symbols-outlined w-[42px] h-[42px] border border-black dark:border-white rounded-lg text-title2 flex justify-center items-center">add</span>
+            </div>
+            <div class="">
+                Receive daily packs personalized to your <span class="font-semibold">unique health needs.</span>
+            </div>
+        </div>
+        <div class="relative">
+            <img class="rounded-b-lg" src="../assets/drink-water.jpg" alt="girl drinking water">
+            <div class="absolute bottom-3 md:bottom-5 left-3 md:left-5 bg-white dark:bg-raisin-black dark:text-white rounded-lg md:rounded-xl p-1 flex gap-2">
+                <span class="material-symbols-outlined w-10 md:w-12 h-10 md:h-12 border border-black dark:border-white rounded-lg text-title2 flex justify-center items-center">emoji_events</span>
+                <span class="material-symbols-outlined w-10 md:w-12 h-10 md:h-12 border border-black dark:border-white rounded-lg text-title2 flex justify-center items-center">cycle</span>
+                <span class="material-symbols-outlined w-10 md:w-12 h-10 md:h-12 border border-black dark:border-white rounded-lg text-title2 flex justify-center items-center">eco</span>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black dark:bg-white text-white dark:text-black rounded-xl px-10 py-5 text-center flex justify-between items-center hover:cursor-pointer">
+        <p>Unlock <span class="font-semibold">personalized</span> plan.</p>
+        <span class="material-symbols-outlined text-[40px]">arrow_right_alt</span>
+    </div>
+
+
+
+</section>
+<script>
+    const btn = document.getElementById("theme-toggle");
+    btn.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+    });
+</script>
 </body>
 </html>
